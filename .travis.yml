@@ -23,5 +23,6 @@ deploy:
     user: "__token__"
     password: "${PYPI_TOKEN}"
     skip_existing: true
+    server: 'https://test.pypi.org/legacy/'
     on:
       tags: true
