@@ -18,6 +18,10 @@ script:
 after_success:
   - coveralls
 
+before_deploy:
+  - >
+    [[ "$(python --version 2>&1)" == *2.7* ]] &&
+    wget -nv -O - https://bootstrap.pypa.io/pip/2.7/get-pip.py | python - --no-setuptools --no-wheel
 deploy:
   - provider: pypi
     user: "__token__"
