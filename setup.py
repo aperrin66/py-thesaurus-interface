@@ -21,8 +21,8 @@ here = path.abspath(path.dirname(path.realpath(__file__)))
 
 # Get the long description from the README file
 long_description = ''
-if path.exists(path.join(here, readme_file)):
-    long_description = open(path.join(here, readme_file)).read()
+# if path.exists(path.join(here, readme_file)):
+#     long_description = open(path.join(here, readme_file)).read()
 
 class update_vocabularies(install_scripts):
     def run(self):
